@@ -1,0 +1,24 @@
+{
+  "name": "kafka-app-kosonen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:producer": "node ./producer/index.js",
+    "start:consumer": "node ./consumer/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unkkis/kafka-app-kosonen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unkkis/kafka-app-kosonen/issues"
+  },
+  "homepage": "https://github.com/Unkkis/kafka-app-kosonen#readme",
+  "dependencies": {
+    "avsc": "^5.7.6",
+    "node-rdkafka": "^2.14.0"
+  }
+}
