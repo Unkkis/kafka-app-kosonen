@@ -23,12 +23,19 @@ const stream = Kafka.Producer.createWriteStream({
 }, {}, { topic: 'answer' });
 
 function checkCalculation(data) {
-    // let answer = `${data}`
-    // let calculation = answer.slice(17, 25)
-    //console.log(answer.slice(17, 25))
+    let answer = `${data}`
+    let n1 = parseInt(answer.slice(16, 17))
+    let n2 = parseInt(answer.slice(20, 21))
+    let n3 = parseInt(answer.slice(24, 25))
+
+    let answerCalc = n1 + n2
+    let answerBack = "NOT RIGHT"
+    if (answerCalc === n3) {
+        answerBack = "RIGHT"
+    }
 
     const success = stream.write(Buffer.from(
-        `Answer from consumer to producer is: `
+        `Your calculation (${n1}+${n2}=${n3}) is ${answerBack} `
     ));
 
     if (success) {
