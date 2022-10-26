@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Unkkis/kafka-app-kosonen#readme",
   "dependencies": {
     "avsc": "^5.7.6",
-    "node-rdkafka": "^2.14.0"
+    "kafkajs": "^2.2.2",
+    "uuid": "^9.0.0"
   }
 }
